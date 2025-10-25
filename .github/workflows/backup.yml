@@ -1,0 +1,17 @@
+name: DISABLED - Database Backup
+
+# Disabled per project requirement: no production server operations.
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "This backup workflow is disabled."
+        required: false
+
+jobs:
+  disabled:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Backup workflow is disabled."

@@ -1,0 +1,37 @@
+includes:
+    - ./vendor/larastan/larastan/extension.neon
+
+parameters:
+    paths:
+        - app
+        - config
+        - database
+        - routes
+    
+    # Level from 0 to 9
+    level: 5
+    
+    ignoreErrors:
+        # Filament dynamic properties
+        - '#Access to an undefined property Filament\\#'
+        - '#Call to an undefined method Filament\\#'
+        
+        # Laravel facades
+        - '#Call to an undefined static method Illuminate\\Support\\Facades\\#'
+        
+        # Model factories
+        - '#Parameter \#1 \$attributes of method .+Factory::create\(\) expects array#'
+    
+    excludePaths:
+        - bootstrap/cache/*
+        - storage/*
+        - vendor/*
+        - node_modules/*
+    
+    checkMissingIterableValueType: false
+    checkGenericClassInNonGenericObjectType: false
+    
+    # Laravel specific
+    universalObjectCratesClasses:
+        - Illuminate\Database\Eloquent\Model
+        - Illuminate\Support\Fluent
