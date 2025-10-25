@@ -1,0 +1,18 @@
+name: DISABLED - Deploy to Production
+
+# This workflow is intentionally disabled per project requirement: no production deploys.
+# Keeping the file (disabled) avoids accidental server actions and documents the decision.
+
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: "This workflow is disabled and will not run."
+        required: false
+
+jobs:
+  disabled:
+    if: false
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This workflow is disabled."
