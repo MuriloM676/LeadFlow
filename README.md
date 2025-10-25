@@ -6,9 +6,9 @@
 [![Filament](https://img.shields.io/badge/Filament-3-F59E0B?style=flat)](https://filamentphp.com)
 [![MySQL](https://img.shields.io/badge/MySQL-8.0-4479A1?style=flat&logo=mysql)](https://www.mysql.com)
 [![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker)](https://www.docker.com)
-[![CI Tests](https://github.com/MuriloM676/leadflow/workflows/CI%20-%20Tests%20and%20Code%20Quality/badge.svg)](https://github.com/MuriloM676/leadflow/actions)
-[![Security](https://github.com/MuriloM676/leadflow/workflows/Security%20Audit/badge.svg)](https://github.com/MuriloM676/leadflow/actions)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Coverage](https://codecov.io/gh/MuriloM676/LeadFlow/branch/main/graph/badge.svg)](https://codecov.io/gh/MuriloM676/LeadFlow)
+[![CI](https://github.com/MuriloM676/LeadFlow/actions/workflows/ci.yml/badge.svg)](https://github.com/MuriloM676/LeadFlow/actions/workflows/ci.yml)
+[![Security](https://github.com/MuriloM676/LeadFlow/actions/workflows/security.yml/badge.svg)](https://github.com/MuriloM676/LeadFlow/actions/workflows/security.yml)
 
 ---
 
