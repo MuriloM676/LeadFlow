@@ -19,8 +19,13 @@ services:
       DB_DATABASE: crm_vendas
       DB_USERNAME: crm_user
       DB_PASSWORD: crm_password
+      APP_URL: http://localhost:8080
+      CACHE_DRIVER: redis
+      SESSION_DRIVER: redis
+      REDIS_HOST: redis
     depends_on:
       - mysql
+      - redis
     networks:
       - crm_network
 
@@ -53,6 +58,16 @@ services:
       MYSQL_PASSWORD: crm_password
     volumes:
       - mysql_data:/var/lib/mysql
+    networks:
+      - crm_network
+
+  # Redis for cache/sessions (faster than filesystem on Windows mounts)
+  redis:
+    image: redis:7-alpine
+    container_name: crm_vendas_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
     networks:
       - crm_network
 
